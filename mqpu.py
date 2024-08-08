@@ -58,3 +58,6 @@ if rank == 0:
     print('single gpu result', exp_val0, 'time', t0)
     print('single node multi gpu result ', exp_val1, 'time', t1)
     print('multi node multi gpu result', exp_val2, 'time', t2)
+
+
+
