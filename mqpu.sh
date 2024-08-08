@@ -12,6 +12,6 @@
 
 export CUDAQ_MPI_COMM_LIB=${HOME}/distributed_interfaces/libcudaq_distributed_interface_mpi.so
 
-srun shifter python3 pmtest.py 
+srun shifter python3 mqpu.py 
 
 
