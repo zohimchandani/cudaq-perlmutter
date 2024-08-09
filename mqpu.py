@@ -1,3 +1,6 @@
+# srun shifter python3 pmtest.py 
+
+
 import cudaq
 from cudaq import spin
 import time 
