@@ -6,7 +6,7 @@ import cudaq
 
 cudaq.set_target("nvidia", option="mgpu")
 
-qubit_count = 34
+qubit_count = 31
 term_count = 10
 
 @cudaq.kernel

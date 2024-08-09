@@ -1,0 +1,13 @@
+RuntimeError: cudaErrorMemoryAllocation
+RuntimeError: cudaErrorMemoryAllocation
+RuntimeError: cudaErrorMemoryAllocation
+0.0
+0.0
+0.0
+0.0
+srun: error: nid001441: task 2: Exited with exit code 1
+srun: Terminating StepId=29207644.0
+0.0
+slurmstepd: error: *** STEP 29207644.0 ON nid001441 CANCELLED AT 2024-08-09T10:37:44 ***
+srun: error: nid001444: task 7: Exited with exit code 1
+srun: error: nid001441: task 0: Exited with exit code 1
