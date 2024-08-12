@@ -12,4 +12,4 @@
 
 export CUDAQ_MPI_COMM_LIB=${HOME}/distributed_interfaces/libcudaq_distributed_interface_mpi.so
 
-srun --mpi=pmix -n 8 shifter python3 mgpu.py 
+srun -N 2 -n 8 shifter bash -l launch.sh mgpu.py

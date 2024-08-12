@@ -6,7 +6,7 @@ import cudaq
 
 cudaq.set_target("nvidia", option="mgpu")
 
-qubit_count = 31
+qubit_count = 35
 term_count = 10
 
 @cudaq.kernel
@@ -15,11 +15,18 @@ def kernel(qubit_count: int):
     h(qubits[0])
     for i in range(1, qubit_count):
         cx(qubits[0], qubits[i])
+        
+counts = cudaq.sample(kernel, qubit_count)
 
-hamiltonian = cudaq.SpinOperator.random(qubit_count, term_count, seed = 44)
+if (cudaq.mpi.rank()==0):
+    counts.dump()
 
-result = cudaq.observe(kernel, hamiltonian, qubit_count).expectation()
-print(result)
+
+
+# hamiltonian = cudaq.SpinOperator.random(qubit_count, term_count, seed = 44)
+
+# result = cudaq.observe(kernel, hamiltonian, qubit_count).expectation()
+# print(result)
 
 
 

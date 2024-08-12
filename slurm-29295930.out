@@ -1,0 +1,12 @@
+rank 7 num_ranks 8
+rank 0 num_ranks 8
+mpi is initialized?  True
+single gpu result 0.0 time 18.85494828224182
+single node multi gpu result  0.0 time 4.060074806213379
+multi node multi gpu result 0.0 time 0.2712128162384033
+rank 5 num_ranks 8
+rank 1 num_ranks 8
+rank 3 num_ranks 8
+rank 6 num_ranks 8
+rank 2 num_ranks 8
+rank 4 num_ranks 8
