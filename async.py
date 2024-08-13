@@ -12,11 +12,9 @@ cudaq.mpi.initialize()
 
 rank = cudaq.mpi.rank()
 total_ranks = cudaq.mpi.num_ranks()
-# rank = 0 
-# total_ranks = 4 
 
 qubit_count = 20
-sample_count = 10000
+sample_count = 1000
 hamiltonian = spin.z(0)
 
 parameters = np.random.default_rng(13).uniform(low=0,high=1,size=(sample_count, qubit_count))
