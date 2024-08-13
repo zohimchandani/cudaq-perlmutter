@@ -1,0 +1,42 @@
+Steps done by Jan are divided into 2 pats: 1-time preparation and job submission from the fresh login to PM w/o setting any env variables
+
+A)======== one time setup
+cd $SCRATCH
+ git clone git@github.com:gzquse/cudaq-perlmutter.git cudaq-perlmutter_martin
+ cd cudaq-perlmutter_martin
+
+# .... copy code from the image
+shifter --image=docker:nvcr.io/nvidia/nightly/cuda-quantum:latest --module=cuda-mpich /bin/bash
+cp -r /opt/nvidia/cudaq/distributed_interfaces/ .
+cp /usr/local/cuda/targets/x86_64-linux/lib/libcudart.so.11.8.89 ~/libcudart.so
+exit
+
+# ... Activate the native MPI plguin on bare metal
+
+export MPI_PATH=/opt/cray/pe/mpich/8.1.27/ofi/gnu/9.1
+source distributed_interfaces/activate_custom_mpi.sh
+>>> Using /opt/cray/pe/mpich/8.1.27/ofi/gnu/9.1/bin/mpic++ to build the MPI plugin for MPI installation in /opt/cray/pe/mpich/8.1.27/ofi/gnu/9.1.
+
+
+CUDAQ_MPI_COMM_LIB=/pscratch/sd/b/balewski/cudaq-perlmutter_martin/distributed_interfaces/libcudaq_distributed_interface_mpi.so
+
+
+B) == = = = ==   fire Slurm job
+ssp pm
+cd $SCRATCH/cudaq-perlmutter_martin
+
+
+salloc -N 2  --gpus-per-task=1 --ntasks-per-node=4 --gpu-bind=none -t 00:10:00 -t 00:10:00 -q debug   -C gpu --image=docker:nvcr.io/nvidia/nightly/cuda-quantum:latest  --module=cuda-mpich -A nstaff
+
+export CUDAQ_MPI_COMM_LIB=./distributed_interfaces/libcudaq_distributed_interface_mpi.so
+
+Error the same as for Martin
+aborting job:
+Fatal error in PMPI_Isend: Other MPI error, error stack:
+PMPI_Isend(161)...........: MPI_Isend(buf=0x7f8bb6002800, count=2097152, dtype=0x4c000834, dest=1, tag=1, MPI_COMM_WORLD, request=0x562103c95010) failed
+MPID_Isend(584)...........: 
+MPIDI_isend_unsafe(136)...: 
+MPIDI_OFI_send_normal(368): OFI tagged senddata failed (ofi_send.h:368:MPIDI_OFI_send_normal:Invalid argument)
+MPICH ERROR [Rank 3] [job id 29339019.0] [Tue Aug 13 19:42:41 2024] [nid003413] - Abort(68792079) (rank 3 in comm 0): Fatal error in PMPI_Isend: Other MPI error, error stack:
+PMPI_Isend(161)...........: MPI_Isend(buf=0x7fb4f0002800, count=2097152, dtype=0x4c000834, dest=7, tag=3, MPI_COMM_WORLD, request=0x555f52af6150) failed
+
