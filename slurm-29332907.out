@@ -1,0 +1,37 @@
+ValueError: Provided qpu_id is invalid (must be <= to platform.num_qpus()).
+error: 'builtin.module' op region #0 ('bodyRegion') failed to verify constraint: region with 1 blocks
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  cudaq::builder failed to JIT compile the Quake representation.
+ValueError: Provided qpu_id is invalid (must be <= to platform.num_qpus()).
+pure virtual method called
+terminate called without an active exception
+ValueError: Provided qpu_id is invalid (must be <= to platform.num_qpus()).
+ValueError: Provided qpu_id is invalid (must be <= to platform.num_qpus()).
+malloc_consolidate(): unaligned fastbin chunk detected
+malloc_consolidate(): invalid chunk size
+parameters shape: (10000, 20)
+split parameters shape: (1250, 20)
+split parameters shape: (1250, 20)
+split parameters shape: (1250, 20)
+split parameters shape: (1250, 20)
+split parameters shape: (1250, 20)
+split parameters shape: (1250, 20)
+split parameters shape: (1250, 20)
+split parameters shape: (1250, 20)
+ValueError: Provided qpu_id is invalid (must be <= to platform.num_qpus()).
+error: 'builtin.module' op region #0 ('bodyRegion') failed to verify constraint: region with 1 blocks
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  cudaq::builder failed to JIT compile the Quake representation.
+srun: error: nid002972: task 4: Aborted
+srun: Terminating StepId=29332907.0
+ValueError: Provided qpu_id is invalid (must be <= to platform.num_qpus()).
+ValueError: Provided qpu_id is invalid (must be <= to platform.num_qpus()).
+ValueError: Provided qpu_id is invalid (must be <= to platform.num_qpus()).
+corrupted size vs. prev_size in fastbins
+corrupted size vs. prev_size in fastbins
+corrupted size vs. prev_size in fastbins
+srun: error: nid002969: task 0: Aborted
+slurmstepd: error: *** STEP 29332907.0 ON nid002969 CANCELLED AT 2024-08-13T15:56:01 ***
+srun: error: nid002969: tasks 2-3: Aborted
+srun: error: nid002972: tasks 5-7: Aborted
+srun: error: nid002969: task 1: Aborted

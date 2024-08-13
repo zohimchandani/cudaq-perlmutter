@@ -1,4 +1,4 @@
-On terminal in Perlmutter, run the following commands: 
+On the login node (zohim@login19:~>) in Perlmutter, run the following commands:
 
 1. Pull the latest image:
 
@@ -18,21 +18,10 @@ On terminal in Perlmutter, run the following commands:
 
 5. Activate the native MPI plguin 
 
-Assuming the default MPICH loaded in Perlmutter matches the one injected into Shifter containers via the cuda-mpich module.
-
 ```
-export MPI_PATH=$MPICH_DIR
+export MPI_PATH=/opt/cray/pe/mpich/8.1.27/ofi/gnu/9.1
 source distributed_interfaces/activate_custom_mpi.sh
 ```
-
-IMPORTANT:
-
-At the time of writing, cuda-mpich shifter module is using libmpi.so from GNU 9.1 compiler, i.e., in the injected opt/udiImage/modules/cuda-mpich/lib64, libmpi.so <-> libmpi_gnu_91.so. However, gcc/9.1.0 is no longer supported as a module. Available: gcc-native/12.3, gcc/10.3.0, gcc/11.2.0,  gcc/12.2.0. MPICH for gcc-9.1 is available at /opt/cray/pe/mpich/8.1.27/ucx/gnu/9.1 although this is no longer listed in module avail.
-
-Until the cuda-mpich shifter module is updated to match the default MPICH of Perlmutter or some modules that we can load, this is the workaround:
-
-`export MPI_PATH=/opt/cray/pe/mpich/8.1.27/ofi/gnu/9.1`
-`source distributed_interfaces/activate_custom_mpi.sh`
 
 6. Verify the successful creation of the local library and environment variable:
 
@@ -40,9 +29,13 @@ Until the cuda-mpich shifter module is updated to match the default MPICH of Per
 
 7. Shifter into the container again and copy some files: 
 
-`shifter --image=docker:nvcr.io/nvidia/nightly/cuda-quantum:latest --module=cuda-mpich /bin/bash`
-`cp /usr/local/cuda/targets/x86_64-linux/lib/libcudart.so.11.8.89 ~/libcudart.so`
-`exit` 
+```
+shifter --image=docker:nvcr.io/nvidia/nightly/cuda-quantum:latest --module=cuda-mpich /bin/bash
+
+cp /usr/local/cuda/targets/x86_64-linux/lib/libcudart.so.11.8.89 ~/libcudart.so
+
+exit
+```
 
 
 Now you have all the settings required to run CUDA-Q on multiple nodes on Perlmutter. 
