@@ -1,3 +1,5 @@
+Please make sure you work in `GLOBAL $HOME` and not `$SCRACH`
+
 On the login node (zohim@login19:~>) in Perlmutter, run the following commands:
 
 1. Pull the latest image:
