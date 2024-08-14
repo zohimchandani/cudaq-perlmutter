@@ -25,6 +25,8 @@ export MPI_PATH=/opt/cray/pe/mpich/8.1.27/ofi/gnu/9.1
 source distributed_interfaces/activate_custom_mpi.sh
 ```
 
+Make sure the `distributed_interfaces` folder from step 5 above is in home directory. 
+
 6. Verify the successful creation of the local library and environment variable:
 
 `echo $CUDAQ_MPI_COMM_LIB`
