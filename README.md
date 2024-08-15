@@ -1,3 +1,5 @@
+Please make sure you work in `GLOBAL $HOME` and not `$SCRACH`
+
 On the login node (zohim@login19:~>) in Perlmutter, run the following commands:
 
 1. Pull the latest image:
@@ -22,6 +24,8 @@ On the login node (zohim@login19:~>) in Perlmutter, run the following commands:
 export MPI_PATH=/opt/cray/pe/mpich/8.1.27/ofi/gnu/9.1
 source distributed_interfaces/activate_custom_mpi.sh
 ```
+
+Make sure the `distributed_interfaces` folder from step 5 above is in home directory. 
 
 6. Verify the successful creation of the local library and environment variable:
 
