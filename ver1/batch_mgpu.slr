@@ -3,7 +3,7 @@
 #SBATCH --gpus-per-task=1
 #SBATCH --ntasks-per-node=4
 #SBATCH --gpu-bind=nonesqs
-#SBATCH -t 00:10:00
+#SBATCH -t 00:28:00
 #SBATCH -q debug
 #SBATCH -A nintern
 #SBATCH -C gpu
@@ -14,13 +14,41 @@
 set -u  # exit if you try to use an uninitialized variable
 set -e  # bash exits if any statement returns a non-true return value
 
+# .... instruction from Zohim, Nvidia
 export MPI_PATH=/opt/cray/pe/mpich/8.1.27/ofi/gnu/9.
 export CUDAQ_MPI_COMM_LIB=${HOME}/distributed_interfaces/libcudaq_distributed_interface_mpi.so
-#env|grep SLURM
+
 G=$((SLURM_NTASKS_PER_NODE * SLURM_NNODES))
 echo S: G=$G N=$SLURM_NNODES
+start_time=$(date +%s)
 
-srun -N ${SLURM_NNODES} -n $G shifter bash -l launch.sh QFT_ker2.py
+# Create working directory
+jobId=${SLURM_JOBID:-123456}
+wrkPath=$SCRATCH/tmp_cudaq/$jobId
+echo wrkPath=$wrkPath
+mkdir -p $wrkPath
+
+# warmup GPUs
+srun -N ${SLURM_NNODES} -n $G shifter bash -l launch.sh   " RND_ker1.py -q 10 -r 10 " >& $wrkPath/log.warm
+
+K=2  # number of circuits per setting
+M=4  # range of qubits variation 
+nRep=80
+
+for (( k=0; k<K; k++ )) ; do
+    for (( m=0; m<M; m++ )) ; do
+	expN=G${G}_rnd_$k
+	mq=$(( m -31 )) # it should be negative to trigger recalculation in .py
+	nRep=$(( 2 * m +80 )) #  mild CX-depth compensation
+	echo "Iteration k=$k m=$m  expN=$expN  mq=$mq"
+	srun -N ${SLURM_NNODES} -n $G  shifter bash -l launch.sh    " RND_ker1.py --numQubits $mq  --numRepeat $nRep   --outPath $wrkPath --expName $expN "  >& $wrkPath/log.m${m}k${k}
+
+    done
+done
 
 echo S: done
+
+end_time=$(date +%s)
+duration=$(( end_time - start_time ))
+echo "Execution time: $duration seconds"
 date

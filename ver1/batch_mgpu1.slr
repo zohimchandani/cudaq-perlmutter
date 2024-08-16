@@ -1,0 +1,26 @@
+#!/bin/bash
+#SBATCH -N 2
+#SBATCH --gpus-per-task=1
+#SBATCH --ntasks-per-node=4
+#SBATCH --gpu-bind=nonesqs
+#SBATCH -t 00:10:00
+#SBATCH -q debug
+#SBATCH -A nintern
+#SBATCH -C gpu
+#SBATCH --image=docker:nvcr.io/nvidia/nightly/cuda-quantum:latest
+#SBATCH --module=cuda-mpich
+#SBATCH --output=out/%j.out
+
+set -u  # exit if you try to use an uninitialized variable
+set -e  # bash exits if any statement returns a non-true return value
+
+export MPI_PATH=/opt/cray/pe/mpich/8.1.27/ofi/gnu/9.
+export CUDAQ_MPI_COMM_LIB=${HOME}/distributed_interfaces/libcudaq_distributed_interface_mpi.so
+#env|grep SLURM
+G=$((SLURM_NTASKS_PER_NODE * SLURM_NNODES))
+echo S: G=$G N=$SLURM_NNODES
+
+srun -N ${SLURM_NNODES} -n $G shifter bash -l launch.sh QFT_ker2.py
+
+echo S: done
+date
