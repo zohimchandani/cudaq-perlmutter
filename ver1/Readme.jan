@@ -1,0 +1,106 @@
+Execution of  circuits on adj-GPU using Shifter image
+and binary residing ina HOME
+
+create local dir out/ for all slurm log files
+assumed image was setup as per Nvidia instruction
+
+A) QFT_ver2.py  is Marti's version of QFT with  inversion, so only 1 string is produced
+
+A.1) Interactive test on 4 GPUs
+salloc -N 1 --gpus-per-task=1 --ntasks-per-node=4 --gpu-bind=nonesqs  -t 4:00:00 -q interactive -A nintern -C gpu --image=docker:nvcr.io/nvidia/nightly/cuda-quantum:latest --module=cuda-mpich
+
+srun -N ${SLURM_NNODES} -n 4 shifter bash -l launch.sh QFT_ker2.py
+
+adj-gpu QFT nq=34  shots=10000  numRank=4  num_sol=10000  elaT= 21.2 sec
+adj-gpu QFT nq=34  shots=10000  numRank=4  num_sol=10000  elaT= 5.0 sec
+adj-gpu QFT nq=34  shots=10000  numRank=4  num_sol=10000  elaT= 5.2 sec
+
+---- -N 2 , 8 GPUs
+srun -N ${SLURM_NNODES} -n 8 shifter bash -l launch.sh QFT_ker2.py
+
+adj-gpu QFT nq=35  shots=10000  numRank=8  num_sol=10000  elaT= 25.9 sec
+adj-gpu QFT nq=35  shots=10000  numRank=8  num_sol=10000  elaT= 9.1 sec
+adj-gpu QFT nq=35  shots=10000  numRank=8  num_sol=10000  elaT= 9.3 sec
+
+
+---- -N 4 , 16 GPUs
+srun -N ${SLURM_NNODES} -n 16 shifter bash -l launch.sh QFT_ker2.py
+
+adj-gpu QFT nq=36  shots=10000  numRank=16  num_sol=10000  elaT= 27.6 sec
+adj-gpu QFT nq=36  shots=10000  numRank=16  num_sol=10000  elaT= 11.4 sec
+adj-gpu QFT nq=36  shots=10000  numRank=16  num_sol=10000  elaT= 11.1 sec
+
+---- -N 8 , 32 GPUs
+srun -N ${SLURM_NNODES} -n 32 shifter bash -l launch.sh QFT_ker2.py
+
+adj-gpu QFT nq=37  shots=10000  numRank=32  num_sol=10000  elaT= 28.7 sec
+adj-gpu QFT nq=37  shots=10000  numRank=32  num_sol=10000  elaT= 12.5 sec
+adj-gpu QFT nq=37  shots=10000  numRank=32  num_sol=10000  elaT= 12.3 sec
+
+
+A.2) ------ -N 1
+srun -N 1 -n 4 shifter bash -l launch.sh    " RND_ker1.py -q 24 -r 10 "
+adj-gpu RND nq=24  nCX=230  shots=10000  numRank=4  num_sol=9997  elaT= 18.1 sec
+adj-gpu RND nq=24  nCX=230  shots=10000  numRank=4  num_sol=9997  elaT= 1.5 sec
+
+srun -N 1 -n 4 shifter bash -l launch.sh    " RND_ker1.py -q 31 -r 80 "
+adj-gpu RND nq=31  nCX=2400  shots=10000  numRank=4  num_sol=10000  elaT= 19.1 sec
+
+srun -N 1 -n 4 shifter bash -l launch.sh    " RND_ker1.py -q 32 -r 80 "
+adj-gpu RND nq=32  nCX=2480  shots=10000  numRank=4  num_sol=10000  elaT= 22.3 sec
+adj-gpu RND nq=32  nCX=2480  shots=10000  numRank=4  num_sol=10000  elaT= 22.4 sec
+
+srun -N 1 -n 4 shifter bash -l launch.sh    " RND_ker1.py -q 33 -r 80 "
+adj-gpu RND nq=33  nCX=2560  shots=10000  numRank=4  num_sol=10000  elaT= 42.9 sec
+
+srun -N 1 -n 4 shifter bash -l launch.sh    " RND_ker1.py -q 34 -r 80 "
+adj-gpu RND nq=34  nCX=2640  shots=10000  numRank=4  num_sol=10000  elaT= 162.7 sec
+
+----- -N 2
+myArgs: verb 1
+myArgs: numQubits 32
+myArgs: numShots 10000
+myArgs: numRepeat 80
+myArgs: myRank 0
+myArgs: numRanks 8
+adj-gpu RND nq=32  nCX=2480  shots=10000  numRank=8 ...
+
+srun -N 2 -n 8 shifter bash -l launch.sh    " RND_ker1.py -q 32 -r 80 "
+adj-gpu RND nq=32  nCX=2480  shots=10000  numRank=8  num_sol=10000  elaT= 27.7 sec
+adj-gpu RND nq=32  nCX=2480  shots=10000  numRank=8  num_sol=10000  elaT= 11.5 sec
+cudaq.set_target("nvidia", option="mgpu,fp32")
+adj-gpu RND nq=31  nCX=2400  shots=10000  numRank=8  num_sol=10000  elaT= 11.5 sec
+
+srun -N 2 -n 8 shifter bash -l launch.sh    " RND_ker1.py -q 33 -r 80 "
+adj-gpu RND nq=33  nCX=2560  shots=10000  numRank=8  num_sol=10000  elaT= 22.0 sec
+
+srun -N 2 -n 8 shifter bash -l launch.sh    " RND_ker1.py -q 34 -r 80 "
+adj-gpu RND nq=34  nCX=2640  shots=10000  numRank=8  num_sol=10000  elaT= 89.1 sec
+adj-gpu RND nq=34  nCX=2640  shots=10000  numRank=8  num_sol=10000  elaT= 89.3 sec
+
+srun -N 2 -n 8 shifter bash -l launch.sh    " RND_ker1.py -q 35 -r 80 "
+adj-gpu RND nq=35  nCX=2720  shots=10000  numRank=8  num_sol=10000  elaT= 94.1 sec
+
+srun -N 2 -n 8 shifter bash -l launch.sh    " RND_ker1.py -q 36 -r 80 "
+| N/A   46C    P0   296W / 500W |  67797MiB / 81920MiB |    100%      Default |
+adj-gpu RND nq=36  nCX=2800  shots=10000  numRank=8  num_sol=10000  elaT= 211.7 sec
+
+-q 37: requested size is too big
+
+- - - - - -N 4
+
+srun -N 4 -n 16 shifter bash -l launch.sh    " RND_ker1.py -q 33 -r 80 "
+adj-gpu RND nq=33  nCX=2560  shots=10000  numRank=16  num_sol=10000  elaT= 32.5 sec
+adj-gpu RND nq=33  nCX=2560  shots=10000  numRank=16  num_sol=10000  elaT= 16.1 sec
+
+srun -N 4 -n 16 shifter bash -l launch.sh    " RND_ker1.py -q 34 -r 80 "
+adj-gpu RND nq=34  nCX=2640  shots=10000  numRank=16  num_sol=10000  elaT= 90.1 sec
+
+srun -N 4 -n 16 shifter bash -l launch.sh    " RND_ker1.py -q 35 -r 80 "
+adj-gpu RND nq=35  nCX=2720  shots=10000  numRank=16  num_sol=10000  elaT= 60.1 sec
+
+srun -N 4 -n 16 shifter bash -l launch.sh    " RND_ker1.py -q 36 -r 80 "
+adj-gpu RND nq=36  nCX=2800  shots=10000  numRank=16  num_sol=10000  elaT= 162.5 sec
+
+srun -N 4 -n 16 shifter bash -l launch.sh    " RND_ker1.py -q 37 -r 80 "
+GPU load jumps between 2% and 100%
