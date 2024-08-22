@@ -5,13 +5,11 @@
 #SBATCH --gpu-bind=none
 #SBATCH -t 00:10:00
 #SBATCH -q debug
-#SBATCH -A m4642
+#SBATCH -A nintern
 #SBATCH -C gpu
 #SBATCH --image=docker:nvcr.io/nvidia/nightly/cuda-quantum:latest
 #SBATCH --module=cuda-mpich
 
-export CUDAQ_MPI_COMM_LIB=${HOME}/distributed_interfaces/libcudaq_distributed_interface_mpi.so
+export CUDAQ_MPI_COMM_LIB=${SCRATCH}/cudaq-perlmutter/distributed_interfaces/libcudaq_distributed_interface_mpi.so
 
-srun shifter python3 mqpu.py 
-
-
+srun -N 2 -n 8 shifter bash -l launch.sh mgpu.py

@@ -1,0 +1,2 @@
+cd ver0
+sbatch ./mgpu.sh 

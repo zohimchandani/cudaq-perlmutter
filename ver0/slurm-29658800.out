@@ -1,0 +1,198 @@
+=========================
+      NVIDIA CUDA-Q      
+=========================
+
+Version: latest
+
+Copyright (c) 2024 NVIDIA Corporation & Affiliates 
+All rights reserved.
+
+To run a command as administrator (user `root`), use `sudo <command>`.
+
+=========================
+      NVIDIA CUDA-Q      
+=========================
+
+Version: latest
+
+Copyright (c) 2024 NVIDIA Corporation & Affiliates 
+All rights reserved.
+
+To run a command as administrator (user `root`), use `sudo <command>`.
+
+=========================
+      NVIDIA CUDA-Q      
+=========================
+
+Version: latest
+
+Copyright (c) 2024 NVIDIA Corporation & Affiliates 
+All rights reserved.
+
+To run a command as administrator (user `root`), use `sudo <command>`.
+
+=========================
+      NVIDIA CUDA-Q      
+=========================
+
+Version: latest
+
+Copyright (c) 2024 NVIDIA Corporation & Affiliates 
+All rights reserved.
+
+To run a command as administrator (user `root`), use `sudo <command>`.
+
+=========================
+      NVIDIA CUDA-Q      
+=========================
+
+Version: latest
+
+Copyright (c) 2024 NVIDIA Corporation & Affiliates 
+All rights reserved.
+
+To run a command as administrator (user `root`), use `sudo <command>`.
+
+=========================
+      NVIDIA CUDA-Q      
+=========================
+
+Version: latest
+
+Copyright (c) 2024 NVIDIA Corporation & Affiliates 
+All rights reserved.
+
+To run a command as administrator (user `root`), use `sudo <command>`.
+
+=========================
+      NVIDIA CUDA-Q      
+=========================
+
+Version: latest
+
+Copyright (c) 2024 NVIDIA Corporation & Affiliates 
+All rights reserved.
+
+To run a command as administrator (user `root`), use `sudo <command>`.
+
+=========================
+      NVIDIA CUDA-Q      
+=========================
+
+Version: latest
+
+Copyright (c) 2024 NVIDIA Corporation & Affiliates 
+All rights reserved.
+
+To run a command as administrator (user `root`), use `sudo <command>`.
+
+MPICH ERROR [Rank 0] [job id 29658800.0] [Thu Aug 22 05:14:22 2024] [nid002840] - Abort(739880719) (rank 0 in comm 0): Fatal error in PMPI_Isend: Other MPI error, error stack:
+PMPI_Isend(161)...........: MPI_Isend(buf=0x7f4972002800, count=2097152, dtype=0x4c000834, dest=4, tag=0, MPI_COMM_WORLD, request=0x558a99cae160) failed
+MPID_Isend(584)...........: 
+MPIDI_isend_unsafe(136)...: 
+MPIDI_OFI_send_normal(368): OFI tagged senddata failed (ofi_send.h:368:MPIDI_OFI_send_normal:Invalid argument)
+
+aborting job:
+Fatal error in PMPI_Isend: Other MPI error, error stack:
+PMPI_Isend(161)...........: MPI_Isend(buf=0x7f4972002800, count=2097152, dtype=0x4c000834, dest=4, tag=0, MPI_COMM_WORLD, request=0x558a99cae160) failed
+MPID_Isend(584)...........: 
+MPIDI_isend_unsafe(136)...: 
+MPIDI_OFI_send_normal(368): OFI tagged senddata failed (ofi_send.h:368:MPIDI_OFI_send_normal:Invalid argument)
+MPICH ERROR [Rank 3] [job id 29658800.0] [Thu Aug 22 05:14:22 2024] [nid002840] - Abort(135900943) (rank 3 in comm 0): Fatal error in PMPI_Isend: Other MPI error, error stack:
+PMPI_Isend(161)...........: MPI_Isend(buf=0x7f1fa6002800, count=2097152, dtype=0x4c000834, dest=7, tag=3, MPI_COMM_WORLD, request=0x561fd082f2f0) failed
+MPID_Isend(584)...........: 
+MPIDI_isend_unsafe(136)...: 
+MPIDI_OFI_send_normal(368): OFI tagged senddata failed (ofi_send.h:368:MPIDI_OFI_send_normal:Invalid argument)
+
+aborting job:
+Fatal error in PMPI_Isend: Other MPI error, error stack:
+PMPI_Isend(161)...........: MPI_Isend(buf=0x7f1fa6002800, count=2097152, dtype=0x4c000834, dest=7, tag=3, MPI_COMM_WORLD, request=0x561fd082f2f0) failed
+MPID_Isend(584)...........: 
+MPIDI_isend_unsafe(136)...: 
+MPIDI_OFI_send_normal(368): OFI tagged senddata failed (ofi_send.h:368:MPIDI_OFI_send_normal:Invalid argument)
+MPICH ERROR [Rank 5] [job id 29658800.0] [Thu Aug 22 05:14:22 2024] [nid003172] - Abort(1008316175) (rank 5 in comm 0): Fatal error in PMPI_Isend: Other MPI error, error stack:
+PMPI_Isend(161)...........: MPI_Isend(buf=0x7ef93a002800, count=2097152, dtype=0x4c000834, dest=1, tag=1, MPI_COMM_WORLD, request=0x560a52d94fe0) failed
+MPID_Isend(584)...........: 
+MPIDI_isend_unsafe(136)...: 
+MPIDI_OFI_send_normal(368): OFI tagged senddata failed (ofi_send.h:368:MPIDI_OFI_send_normal:Invalid argument)
+
+aborting job:
+Fatal error in PMPI_Isend: Other MPI error, error stack:
+PMPI_Isend(161)...........: MPI_Isend(buf=0x7ef93a002800, count=2097152, dtype=0x4c000834, dest=1, tag=1, MPI_COMM_WORLD, request=0x560a52d94fe0) failed
+MPID_Isend(584)...........: 
+MPIDI_isend_unsafe(136)...: 
+MPIDI_OFI_send_normal(368): OFI tagged senddata failed (ofi_send.h:368:MPIDI_OFI_send_normal:Invalid argument)
+MPICH ERROR [Rank 6] [job id 29658800.0] [Thu Aug 22 05:14:22 2024] [nid003172] - Abort(941207311) (rank 6 in comm 0): Fatal error in PMPI_Isend: Other MPI error, error stack:
+PMPI_Isend(161)...........: MPI_Isend(buf=0x7ff0f4002800, count=2097152, dtype=0x4c000834, dest=2, tag=2, MPI_COMM_WORLD, request=0x55e8b7beda20) failed
+MPID_Isend(584)...........: 
+MPIDI_isend_unsafe(136)...: 
+MPIDI_OFI_send_normal(368): OFI tagged senddata failed (ofi_send.h:368:MPIDI_OFI_send_normal:Invalid argument)
+
+aborting job:
+Fatal error in PMPI_Isend: Other MPI error, error stack:
+PMPI_Isend(161)...........: MPI_Isend(buf=0x7ff0f4002800, count=2097152, dtype=0x4c000834, dest=2, tag=2, MPI_COMM_WORLD, request=0x55e8b7beda20) failed
+MPID_Isend(584)...........: 
+MPIDI_isend_unsafe(136)...: 
+MPIDI_OFI_send_normal(368): OFI tagged senddata failed (ofi_send.h:368:MPIDI_OFI_send_normal:Invalid argument)
+MPICH ERROR [Rank 1] [job id 29658800.0] [Thu Aug 22 05:14:22 2024] [nid002840] - Abort(337227535) (rank 1 in comm 0): Fatal error in PMPI_Isend: Other MPI error, error stack:
+PMPI_Isend(161)...........: MPI_Isend(buf=0x7fc6b8002800, count=2097152, dtype=0x4c000834, dest=5, tag=1, MPI_COMM_WORLD, request=0x5644d0398c20) failed
+MPID_Isend(584)...........: 
+MPIDI_isend_unsafe(136)...: 
+MPIDI_OFI_send_normal(368): OFI tagged senddata failed (ofi_send.h:368:MPIDI_OFI_send_normal:Invalid argument)
+
+aborting job:
+Fatal error in PMPI_Isend: Other MPI error, error stack:
+PMPI_Isend(161)...........: MPI_Isend(buf=0x7fc6b8002800, count=2097152, dtype=0x4c000834, dest=5, tag=1, MPI_COMM_WORLD, request=0x5644d0398c20) failed
+MPID_Isend(584)...........: 
+MPIDI_isend_unsafe(136)...: 
+MPIDI_OFI_send_normal(368): OFI tagged senddata failed (ofi_send.h:368:MPIDI_OFI_send_normal:Invalid argument)
+MPICH ERROR [Rank 4] [job id 29658800.0] [Thu Aug 22 05:14:22 2024] [nid003172] - Abort(337227535) (rank 4 in comm 0): Fatal error in PMPI_Isend: Other MPI error, error stack:
+PMPI_Isend(161)...........: MPI_Isend(buf=0x7f79ba002800, count=2097152, dtype=0x4c000834, dest=0, tag=0, MPI_COMM_WORLD, request=0x55669940d1e0) failed
+MPID_Isend(584)...........: 
+MPIDI_isend_unsafe(136)...: 
+MPIDI_OFI_send_normal(368): OFI tagged senddata failed (ofi_send.h:368:MPIDI_OFI_send_normal:Invalid argument)
+
+aborting job:
+Fatal error in PMPI_Isend: Other MPI error, error stack:
+PMPI_Isend(161)...........: MPI_Isend(buf=0x7f79ba002800, count=2097152, dtype=0x4c000834, dest=0, tag=0, MPI_COMM_WORLD, request=0x55669940d1e0) failed
+MPID_Isend(584)...........: 
+MPIDI_isend_unsafe(136)...: 
+MPIDI_OFI_send_normal(368): OFI tagged senddata failed (ofi_send.h:368:MPIDI_OFI_send_normal:Invalid argument)
+MPICH ERROR [Rank 2] [job id 29658800.0] [Thu Aug 22 05:14:22 2024] [nid002840] - Abort(739880719) (rank 2 in comm 0): Fatal error in PMPI_Isend: Other MPI error, error stack:
+PMPI_Isend(161)...........: MPI_Isend(buf=0x7f363a002800, count=2097152, dtype=0x4c000834, dest=6, tag=2, MPI_COMM_WORLD, request=0x5563c5c9ba00) failed
+MPID_Isend(584)...........: 
+MPIDI_isend_unsafe(136)...: 
+MPIDI_OFI_send_normal(368): OFI tagged senddata failed (ofi_send.h:368:MPIDI_OFI_send_normal:Invalid argument)
+
+aborting job:
+Fatal error in PMPI_Isend: Other MPI error, error stack:
+PMPI_Isend(161)...........: MPI_Isend(buf=0x7f363a002800, count=2097152, dtype=0x4c000834, dest=6, tag=2, MPI_COMM_WORLD, request=0x5563c5c9ba00) failed
+MPID_Isend(584)...........: 
+MPIDI_isend_unsafe(136)...: 
+MPIDI_OFI_send_normal(368): OFI tagged senddata failed (ofi_send.h:368:MPIDI_OFI_send_normal:Invalid argument)
+MPICH ERROR [Rank 7] [job id 29658800.0] [Thu Aug 22 05:14:22 2024] [nid003172] - Abort(471445263) (rank 7 in comm 0): Fatal error in PMPI_Isend: Other MPI error, error stack:
+PMPI_Isend(161)...........: MPI_Isend(buf=0x7f58b2002800, count=2097152, dtype=0x4c000834, dest=3, tag=3, MPI_COMM_WORLD, request=0x55fbb3224e00) failed
+MPID_Isend(584)...........: 
+MPIDI_isend_unsafe(136)...: 
+MPIDI_OFI_send_normal(368): OFI tagged senddata failed (ofi_send.h:368:MPIDI_OFI_send_normal:Invalid argument)
+
+aborting job:
+Fatal error in PMPI_Isend: Other MPI error, error stack:
+PMPI_Isend(161)...........: MPI_Isend(buf=0x7f58b2002800, count=2097152, dtype=0x4c000834, dest=3, tag=3, MPI_COMM_WORLD, request=0x55fbb3224e00) failed
+MPID_Isend(584)...........: 
+MPIDI_isend_unsafe(136)...: 
+MPIDI_OFI_send_normal(368): OFI tagged senddata failed (ofi_send.h:368:MPIDI_OFI_send_normal:Invalid argument)
+Attempting to use an MPI routine after finalizing MPICH
+Attempting to use an MPI routine after finalizing MPICH
+Attempting to use an MPI routine after finalizing MPICH
+Attempting to use an MPI routine after finalizing MPICH
+Attempting to use an MPI routine after finalizing MPICH
+Attempting to use an MPI routine after finalizing MPICH
+Attempting to use an MPI routine after finalizing MPICH
+Attempting to use an MPI routine after finalizing MPICH
+srun: error: nid003172: task 5: Exited with exit code 1
+srun: Terminating StepId=29658800.0
+srun: error: nid002840: task 0: Exited with exit code 1
+slurmstepd: error: *** STEP 29658800.0 ON nid002840 CANCELLED AT 2024-08-22T05:14:24 ***
+srun: error: nid003172: tasks 4,6-7: Exited with exit code 1
+srun: error: nid002840: tasks 1-3: Exited with exit code 1
