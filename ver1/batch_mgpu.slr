@@ -5,7 +5,7 @@
 #SBATCH --gpu-bind=nonesqs
 #SBATCH -t 00:28:00
 #SBATCH -q debug
-#SBATCH -A nintern
+#SBATCH -A nstaff
 #SBATCH -C gpu
 #SBATCH --image=docker:nvcr.io/nvidia/nightly/cuda-quantum:latest
 #SBATCH --module=cuda-mpich
@@ -16,7 +16,7 @@ set -e  # bash exits if any statement returns a non-true return value
 
 # .... instruction from Zohim, Nvidia
 export MPI_PATH=/opt/cray/pe/mpich/8.1.27/ofi/gnu/9.
-export CUDAQ_MPI_COMM_LIB=${HOME}/distributed_interfaces/libcudaq_distributed_interface_mpi.so
+#export CUDAQ_MPI_COMM_LIB=${HOME}/distributed_interfaces/libcudaq_distributed_interface_mpi.so
 
 G=$((SLURM_NTASKS_PER_NODE * SLURM_NNODES))
 echo S: G=$G N=$SLURM_NNODES
@@ -29,7 +29,7 @@ echo wrkPath=$wrkPath
 mkdir -p $wrkPath
 
 # warmup GPUs
-srun -N ${SLURM_NNODES} -n $G shifter bash -l launch.sh   " RND_ker1.py -q 10 -r 10 " >& $wrkPath/log.warm
+srun -N ${SLURM_NNODES} -n $G shifter bash -l launch_cfs.sh   " RND_ker1.py -q 10 -r 10 " >& $wrkPath/log.warm
 
 K=2  # number of circuits per setting
 M=4  # range of qubits variation 
@@ -41,7 +41,7 @@ for (( k=0; k<K; k++ )) ; do
 	mq=$(( m -31 )) # it should be negative to trigger recalculation in .py
 	nRep=$(( 2 * m +80 )) #  mild CX-depth compensation
 	echo "Iteration k=$k m=$m  expN=$expN  mq=$mq"
-	srun -N ${SLURM_NNODES} -n $G  shifter bash -l launch.sh    " RND_ker1.py --numQubits $mq  --numRepeat $nRep   --outPath $wrkPath --expName $expN "  >& $wrkPath/log.m${m}k${k}
+	srun -N ${SLURM_NNODES} -n $G  shifter bash -l launch_cfs.sh    " RND_ker1.py --numQubits $mq  --numRepeat $nRep   --outPath $wrkPath --expName $expN "  >& $wrkPath/log.m${m}k${k}
 
     done
 done

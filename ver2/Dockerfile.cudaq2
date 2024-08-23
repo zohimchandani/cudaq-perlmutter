@@ -1,0 +1,8 @@
+FROM nvcr.io/nvidia/nightly/cuda-quantum:latest
+ENTRYPOINT []
+
+#  time podman-hpc build -f Dockerfile.cudaq2 -t balewski/cudaq2_test:v5  .
+#  podman-hpc migrate  balewski/cudaq2_test:v5
+# podman-hpc run -it --rm --gpu  balewski/cudaq2_test:v5 bash
+# echo $LD_LIBRARY_PATH 
+
