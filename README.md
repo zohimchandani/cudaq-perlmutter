@@ -14,6 +14,8 @@ On the login node (zohim@login19:~>) in Perlmutter, run the following commands:
 
 `cp -r /opt/nvidia/cudaq/distributed_interfaces/ .`
 
+3.5. Pip install any packages you would like
+
 4. Exit the image: 
 
 `exit`
