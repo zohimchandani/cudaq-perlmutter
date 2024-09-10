@@ -15,7 +15,7 @@ if rank == 0:
 print("Current rank: ", rank)
 
 qubit_count = 10
-sample_count = 400
+sample_count = 4000
 hamiltonian = spin.z(0)
 
 @cudaq.kernel

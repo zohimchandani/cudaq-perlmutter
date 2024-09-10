@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH -N 1
-#SBATCH --gpus-per-task=1
-#SBATCH --ntasks-per-node=4
+#SBATCH --gpus-per-node=4
+#SBATCH --ntasks-per-node=8
 #SBATCH --gpu-bind=none
 #SBATCH -t 00:10:00
 #SBATCH -q debug
