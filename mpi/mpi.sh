@@ -14,4 +14,4 @@ export CUDAQ_MPI_COMM_LIB=${HOME}/distributed_interfaces/libcudaq_distributed_in
 export LD_LIBRARY_PATH=$HOME:$LD_LIBRARY_PATH
 python3 $1
 
-srun --mpi=pmix shifter python3 mpi.py
+srun --mpi=pmix shifter run_mpi_py.sh python3 mpi.py

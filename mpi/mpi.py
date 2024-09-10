@@ -2,6 +2,7 @@ import cudaq
 from cudaq import spin
 import numpy as np
 from mpi4py import MPI
+import time 
 
 cudaq.set_target("nvidia")
 
@@ -11,11 +12,12 @@ rank = comm.Get_rank()
 
 if rank == 0: 
     print("Total number of ranks: ", total_ranks)
+    start = time.time()
     
 print("Current rank: ", rank)
 
-qubit_count = 10
-sample_count = 4000
+qubit_count = 15
+sample_count = 80000
 hamiltonian = spin.z(0)
 
 @cudaq.kernel
@@ -34,7 +36,6 @@ if rank == 0:
 else: 
     params = None
 
-
 # Distribute the work (from zeroth process to non-zero processes)
 split_params = comm.scatter(params, root = 0)
 
@@ -51,3 +52,6 @@ results = comm.gather(local_exp_vals, root=0)
 if rank == 0:
     final_result = np.concatenate(results)
     print(len(final_result))
+    end = time.time()
+    
+    print('total time', end - start )

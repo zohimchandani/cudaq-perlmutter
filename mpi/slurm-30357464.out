@@ -1,0 +1,12 @@
+/usr/bin/shifter: run_mpi_py.sh: Permission denied
+/usr/bin/shifter: run_mpi_py.sh: Permission denied
+srun: error: nid002717: tasks 5,7: Exited with exit code 127
+srun: Terminating StepId=30357464.0
+/usr/bin/shifter: run_mpi_py.sh: Permission denied
+/usr/bin/shifter: run_mpi_py.sh: Permission denied
+/usr/bin/shifter: run_mpi_py.sh: Permission denied
+/usr/bin/shifter: run_mpi_py.sh: Permission denied
+/usr/bin/shifter: run_mpi_py.sh: Permission denied
+/usr/bin/shifter: run_mpi_py.sh: Permission denied
+slurmstepd: error: *** STEP 30357464.0 ON nid002717 CANCELLED AT 2024-09-10T21:00:43 ***
+srun: error: nid002717: tasks 0-4,6: Exited with exit code 127
