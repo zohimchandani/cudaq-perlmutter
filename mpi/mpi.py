@@ -14,8 +14,8 @@ if rank == 0:
     
 print("Current rank: ", rank)
 
-qubit_count = 20
-sample_count = 4000
+qubit_count = 10
+sample_count = 400
 hamiltonian = spin.z(0)
 
 @cudaq.kernel
@@ -25,7 +25,6 @@ def kernel(thetas:list[float]):
     
     for i in range(qubit_count):
         rx(thetas[i], qubits[i])
-
 
 if rank == 0:
     params = np.random.default_rng(13).uniform(low=0,high=1,size=(sample_count, qubit_count))
