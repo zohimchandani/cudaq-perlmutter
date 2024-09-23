@@ -3,6 +3,8 @@ from cudaq import spin
 import numpy as np
 from mpi4py import MPI
 import time 
+import cupy as cp
+
 
 cudaq.set_target("nvidia")
 
@@ -10,11 +12,19 @@ comm = MPI.COMM_WORLD
 total_ranks = comm.Get_size()
 rank = comm.Get_rank()
 
-if rank == 0: 
+gpusCount = cp.cuda.runtime.getDeviceCount()
+cp.cuda.runtime.setDevice(rank % gpusCount)
+device_id = cp.cuda.runtime.getDevice()
+
+
+if rank == 0:
     print("Total number of ranks: ", total_ranks)
+    print("Total number of gpus: ", gpusCount)
+
     start = time.time()
-    
-print("Current rank: ", rank)
+
+
+print(f"Current rank: {rank}, current device id = {device_id}")
 
 qubit_count = 15
 sample_count = 80000

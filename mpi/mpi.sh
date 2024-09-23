@@ -1,7 +1,7 @@
 #!/bin/bash
-#SBATCH -N 1
+#SBATCH -N 2
 #SBATCH --gpus-per-node=4
-#SBATCH --ntasks-per-node=8
+#SBATCH --ntasks-per-node=4
 #SBATCH --gpu-bind=none
 #SBATCH -t 00:10:00
 #SBATCH -q debug
@@ -11,7 +11,5 @@
 #SBATCH --module=cuda-mpich
 
 export CUDAQ_MPI_COMM_LIB=${HOME}/distributed_interfaces/libcudaq_distributed_interface_mpi.so
-export LD_LIBRARY_PATH=$HOME:$LD_LIBRARY_PATH
-python3 $1
 
-srun --mpi=pmix shifter run_mpi_py.sh mpi.py
+srun --mpi=pmix shifter python3 mpi.py
