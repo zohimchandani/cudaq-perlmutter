@@ -18,13 +18,11 @@ device_id = cp.cuda.runtime.getDevice()
 
 
 if rank == 0:
-    print("Total number of ranks: ", total_ranks)
     print("Total number of gpus: ", gpusCount)
+    print("Total number of ranks: ", total_ranks)
 
     start = time.time()
 
-
-print(f"Current rank: {rank}, current device id = {device_id}")
 
 qubit_count = 15
 sample_count = 80000
@@ -49,7 +47,7 @@ else:
 # Distribute the work (from zeroth process to non-zero processes)
 split_params = comm.scatter(params, root = 0)
 
-print(f'rank {rank} has {split_params.shape} elements of the parameter values')
+print('Current rank:', rank, 'current device id:', device_id, 'params shape:', split_params.shape)
 
 
 # Each process performs its work        
@@ -61,7 +59,5 @@ results = comm.gather(local_exp_vals, root=0)
 
 if rank == 0:
     final_result = np.concatenate(results)
-    print(len(final_result))
-    end = time.time()
-    
+    end = time.time()    
     print('total time', end - start )
