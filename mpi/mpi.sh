@@ -1,15 +1,17 @@
 #!/bin/bash
-#SBATCH -N 2
-#SBATCH --gpus-per-node=4
+#SBATCH --constraint=gpu
+#SBATCH --nodes=2            
+#SBATCH --ntasks=8            ## number of MPI tasks/ ranks 
 #SBATCH --ntasks-per-node=4
+#SBATCH --gpus-per-node=4
 #SBATCH --gpu-bind=none
-#SBATCH -t 00:10:00
-#SBATCH -q debug
-#SBATCH -A m4642
-#SBATCH -C gpu
+#SBATCH --time=00:10:00
+#SBATCH --qos=debug
+#SBATCH --account=m4642
 #SBATCH --image=docker:nvcr.io/nvidia/nightly/cuda-quantum:latest
 #SBATCH --module=cuda-mpich
 
+export LD_LIBRARY_PATH=$HOME:$LD_LIBRARY_PATH
 export CUDAQ_MPI_COMM_LIB=${HOME}/distributed_interfaces/libcudaq_distributed_interface_mpi.so
 
-srun --mpi=pmix shifter python3 mpi.py
+srun -N 1 -n 8 --mpi=pmix shifter bash -l launch.sh test.py

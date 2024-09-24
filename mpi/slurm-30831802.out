@@ -1,7 +1,0 @@
-[1727091334.732235] [nid002744:649856:0]          select.c:549  UCX  ERROR   no active messages transport to <no debug data>: Unsupported operation
-[nid002744:649856] pml_ucx.c:419  Error: ucp_ep_create(proc=4) failed: Destination is unreachable
-[nid002744:649856] pml_ucx.c:472  Error: Failed to resolve UCX endpoint for rank 4
-Total number of gpus:  4
-Total number of ranks:  8
-rank 0 has (80000, 15) elements of the parameter values
-mpi4py.MPI.Exception: MPI_ERR_OTHER: known error not in list

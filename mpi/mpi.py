@@ -5,15 +5,14 @@ from mpi4py import MPI
 import time 
 import cupy as cp
 
-
 cudaq.set_target("nvidia")
 
-comm = MPI.COMM_WORLD
-total_ranks = comm.Get_size()
-rank = comm.Get_rank()
+communicator = MPI.COMM_WORLD
+total_ranks = communicator.Get_size()
+rank = communicator.Get_rank()
 
 gpusCount = cp.cuda.runtime.getDeviceCount()
-cp.cuda.runtime.setDevice(rank % gpusCount)
+cp.cuda.runtime.setDevice(rank % gpusCount)  #round robin distribution 
 device_id = cp.cuda.runtime.getDevice()
 
 
@@ -45,7 +44,7 @@ else:
     params = None
 
 # Distribute the work (from zeroth process to non-zero processes)
-split_params = comm.scatter(params, root = 0)
+split_params = communicator.scatter(params, root = 0)
 
 print('Current rank:', rank, 'current device id:', device_id, 'params shape:', split_params.shape)
 
@@ -55,7 +54,7 @@ local_results = cudaq.observe(kernel, hamiltonian, split_params)
 local_exp_vals = [result.expectation() for result in local_results]
 
 # # Gather results from all processes
-results = comm.gather(local_exp_vals, root=0)
+results = communicator.gather(local_exp_vals, root=0)
 
 if rank == 0:
     final_result = np.concatenate(results)
