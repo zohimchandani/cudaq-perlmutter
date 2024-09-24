@@ -1,8 +1,8 @@
 #!/bin/bash
 #SBATCH --constraint=gpu
 #SBATCH --nodes=2            
-#SBATCH --ntasks=8            ## number of MPI tasks/ ranks 
-#SBATCH --ntasks-per-node=4
+#SBATCH --ntasks=16            ## number of MPI tasks/ ranks 
+#SBATCH --ntasks-per-node=8
 #SBATCH --gpus-per-node=4
 #SBATCH --gpu-bind=none
 #SBATCH --time=00:10:00
