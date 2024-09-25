@@ -23,8 +23,8 @@ if rank == 0:
     start = time.time()
 
 
-qubit_count = 15
-sample_count = 80000
+qubit_count = 10
+sample_count = 48000
 hamiltonian = spin.z(0)
 
 @cudaq.kernel
@@ -46,7 +46,7 @@ else:
 # Distribute the work (from zeroth process to non-zero processes)
 split_params = communicator.scatter(params, root = 0)
 
-print('Current rank:', rank, 'current device id:', device_id, 'params shape:', split_params.shape)
+print('Current rank:', rank, 'current device id:', device_id, 'pci id', cp.cuda.Device().pci_bus_id ,'params shape:', split_params.shape)
 
 
 # Each process performs its work        

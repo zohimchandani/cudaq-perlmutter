@@ -1,0 +1,98 @@
+=========================
+      NVIDIA CUDA-Q      
+=========================
+
+Version: latest
+
+Copyright (c) 2024 NVIDIA Corporation & Affiliates 
+All rights reserved.
+
+To run a command as administrator (user `root`), use `sudo <command>`.
+
+=========================
+      NVIDIA CUDA-Q      
+=========================
+
+Version: latest
+
+Copyright (c) 2024 NVIDIA Corporation & Affiliates 
+All rights reserved.
+
+To run a command as administrator (user `root`), use `sudo <command>`.
+
+=========================
+      NVIDIA CUDA-Q      
+=========================
+
+Version: latest
+
+Copyright (c) 2024 NVIDIA Corporation & Affiliates 
+All rights reserved.
+
+To run a command as administrator (user `root`), use `sudo <command>`.
+
+=========================
+      NVIDIA CUDA-Q      
+=========================
+
+Version: latest
+
+Copyright (c) 2024 NVIDIA Corporation & Affiliates 
+All rights reserved.
+
+To run a command as administrator (user `root`), use `sudo <command>`.
+
+=========================
+      NVIDIA CUDA-Q      
+=========================
+
+Version: latest
+
+Copyright (c) 2024 NVIDIA Corporation & Affiliates 
+All rights reserved.
+
+To run a command as administrator (user `root`), use `sudo <command>`.
+
+=========================
+      NVIDIA CUDA-Q      
+=========================
+
+Version: latest
+
+Copyright (c) 2024 NVIDIA Corporation & Affiliates 
+All rights reserved.
+
+To run a command as administrator (user `root`), use `sudo <command>`.
+
+=========================
+      NVIDIA CUDA-Q      
+=========================
+
+Version: latest
+
+Copyright (c) 2024 NVIDIA Corporation & Affiliates 
+All rights reserved.
+
+To run a command as administrator (user `root`), use `sudo <command>`.
+
+=========================
+      NVIDIA CUDA-Q      
+=========================
+
+Version: latest
+
+Copyright (c) 2024 NVIDIA Corporation & Affiliates 
+All rights reserved.
+
+To run a command as administrator (user `root`), use `sudo <command>`.
+
+Current rank: 3 current device id: 3 pci id 0000:C1:00.0 bus id 193 name b'NVIDIA A100-SXM4-40GB'
+Current rank: 1 current device id: 1 pci id 0000:41:00.0 bus id 65 name b'NVIDIA A100-SXM4-40GB'
+Current rank: 2 current device id: 2 pci id 0000:82:00.0 bus id 130 name b'NVIDIA A100-SXM4-40GB'
+total_ranks:  8
+Total number of gpus:  4
+Current rank: 0 current device id: 0 pci id 0000:03:00.0 bus id 3 name b'NVIDIA A100-SXM4-40GB'
+Current rank: 7 current device id: 3 pci id 0000:C1:00.0 bus id 193 name b'NVIDIA A100-SXM4-40GB'
+Current rank: 4 current device id: 0 pci id 0000:03:00.0 bus id 3 name b'NVIDIA A100-SXM4-40GB'
+Current rank: 6 current device id: 2 pci id 0000:82:00.0 bus id 130 name b'NVIDIA A100-SXM4-40GB'
+Current rank: 5 current device id: 1 pci id 0000:41:00.0 bus id 65 name b'NVIDIA A100-SXM4-40GB'

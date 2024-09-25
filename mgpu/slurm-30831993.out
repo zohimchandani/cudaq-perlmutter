@@ -86,13 +86,4 @@ All rights reserved.
 
 To run a command as administrator (user `root`), use `sudo <command>`.
 
-rank:  3 device_id:  3
-rank:  6 device_id:  2
-total_ranks:  8
-Total number of gpus:  4
-rank:  0 device_id:  0
-rank:  1 device_id:  1
-rank:  7 device_id:  3
-rank:  5 device_id:  1
-rank:  2 device_id:  2
-rank:  4 device_id:  0
+{ 11111111111111111111111111111111111:487 00000000000000000000000000000000000:513 }

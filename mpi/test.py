@@ -1,8 +1,4 @@
-import cudaq
-from cudaq import spin
-import numpy as np
 from mpi4py import MPI
-import time 
 import cupy as cp
 
 
@@ -14,9 +10,19 @@ gpusCount = cp.cuda.runtime.getDeviceCount()
 cp.cuda.runtime.setDevice(rank % gpusCount)  #round robin distribution 
 device_id = cp.cuda.runtime.getDevice()
 
+device_props = cp.cuda.runtime.getDeviceProperties(device_id)
+pci_bus_id = device_props['pciBusID']  # PCI Bus ID
+name = device_props['name']  # Device name
+
 
 if rank == 0:
     print("total_ranks: ", total_ranks)
     print("Total number of gpus: ", gpusCount)
 
-print("rank: ", rank, "device_id: ", device_id)
+
+print('Current rank:', rank, 
+      'current device id:', device_id, 
+      'pci id', cp.cuda.Device().pci_bus_id,
+      'bus id', pci_bus_id,
+      'name', name)
+
