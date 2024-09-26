@@ -11,20 +11,23 @@ communicator = MPI.COMM_WORLD
 total_ranks = communicator.Get_size()
 rank = communicator.Get_rank()
 
-gpusCount = cp.cuda.runtime.getDeviceCount()
-cp.cuda.runtime.setDevice(rank % gpusCount)  #round robin distribution 
-device_id = cp.cuda.runtime.getDevice()
-
-
 if rank == 0:
-    print("Total number of gpus: ", gpusCount)
-    print("Total number of ranks: ", total_ranks)
-
     start = time.time()
 
+#by the time the code gets to this part, the slurm script has already distributed
+#the number of tasks according to the number of tasks per node specified. 
+
+gpus_count = cp.cuda.runtime.getDeviceCount()  #this outputs gpus on a node
+
+#round robin distribution of ranks on a node with gpus on a node 
+cp.cuda.runtime.setDevice(rank % gpus_count) 
+
+device_id = cp.cuda.runtime.getDevice()
+device_properties = cp.cuda.runtime.getDeviceProperties(device_id)
+unique_gpu_identifier = device_properties['uuid'] 
 
 qubit_count = 10
-sample_count = 48000
+sample_count = 10000
 hamiltonian = spin.z(0)
 
 @cudaq.kernel
@@ -46,7 +49,11 @@ else:
 # Distribute the work (from zeroth process to non-zero processes)
 split_params = communicator.scatter(params, root = 0)
 
-print('Current rank:', rank, 'current device id:', device_id, 'pci id', cp.cuda.Device().pci_bus_id ,'params shape:', split_params.shape)
+      
+print('total_ranks: ', total_ranks, 
+      ', current rank: ', rank,
+      ', unique_gpu_identifier: ', unique_gpu_identifier[:1], 
+      ', params shape:', split_params.shape)
 
 
 # Each process performs its work        

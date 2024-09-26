@@ -1,0 +1,194 @@
+=========================
+      NVIDIA CUDA-Q      
+=========================
+
+Version: latest
+
+Copyright (c) 2024 NVIDIA Corporation & Affiliates 
+All rights reserved.
+
+To run a command as administrator (user `root`), use `sudo <command>`.
+
+=========================
+      NVIDIA CUDA-Q      
+=========================
+
+Version: latest
+
+Copyright (c) 2024 NVIDIA Corporation & Affiliates 
+All rights reserved.
+
+To run a command as administrator (user `root`), use `sudo <command>`.
+
+=========================
+      NVIDIA CUDA-Q      
+=========================
+
+Version: latest
+
+Copyright (c) 2024 NVIDIA Corporation & Affiliates 
+All rights reserved.
+
+To run a command as administrator (user `root`), use `sudo <command>`.
+
+=========================
+      NVIDIA CUDA-Q      
+=========================
+
+Version: latest
+
+Copyright (c) 2024 NVIDIA Corporation & Affiliates 
+All rights reserved.
+
+To run a command as administrator (user `root`), use `sudo <command>`.
+
+=========================
+      NVIDIA CUDA-Q      
+=========================
+
+Version: latest
+
+Copyright (c) 2024 NVIDIA Corporation & Affiliates 
+All rights reserved.
+
+To run a command as administrator (user `root`), use `sudo <command>`.
+
+=========================
+      NVIDIA CUDA-Q      
+=========================
+
+Version: latest
+
+Copyright (c) 2024 NVIDIA Corporation & Affiliates 
+All rights reserved.
+
+To run a command as administrator (user `root`), use `sudo <command>`.
+
+=========================
+      NVIDIA CUDA-Q      
+=========================
+
+Version: latest
+
+Copyright (c) 2024 NVIDIA Corporation & Affiliates 
+All rights reserved.
+
+To run a command as administrator (user `root`), use `sudo <command>`.
+
+=========================
+      NVIDIA CUDA-Q      
+=========================
+
+Version: latest
+
+Copyright (c) 2024 NVIDIA Corporation & Affiliates 
+All rights reserved.
+
+To run a command as administrator (user `root`), use `sudo <command>`.
+
+=========================
+      NVIDIA CUDA-Q      
+=========================
+
+Version: latest
+
+Copyright (c) 2024 NVIDIA Corporation & Affiliates 
+All rights reserved.
+
+To run a command as administrator (user `root`), use `sudo <command>`.
+
+=========================
+      NVIDIA CUDA-Q      
+=========================
+
+Version: latest
+
+Copyright (c) 2024 NVIDIA Corporation & Affiliates 
+All rights reserved.
+
+To run a command as administrator (user `root`), use `sudo <command>`.
+
+=========================
+      NVIDIA CUDA-Q      
+=========================
+
+Version: latest
+
+Copyright (c) 2024 NVIDIA Corporation & Affiliates 
+All rights reserved.
+
+To run a command as administrator (user `root`), use `sudo <command>`.
+
+=========================
+      NVIDIA CUDA-Q      
+=========================
+
+Version: latest
+
+Copyright (c) 2024 NVIDIA Corporation & Affiliates 
+All rights reserved.
+
+To run a command as administrator (user `root`), use `sudo <command>`.
+
+=========================
+      NVIDIA CUDA-Q      
+=========================
+
+Version: latest
+
+Copyright (c) 2024 NVIDIA Corporation & Affiliates 
+All rights reserved.
+
+To run a command as administrator (user `root`), use `sudo <command>`.
+
+=========================
+      NVIDIA CUDA-Q      
+=========================
+
+Version: latest
+
+Copyright (c) 2024 NVIDIA Corporation & Affiliates 
+All rights reserved.
+
+To run a command as administrator (user `root`), use `sudo <command>`.
+
+=========================
+      NVIDIA CUDA-Q      
+=========================
+
+Version: latest
+
+Copyright (c) 2024 NVIDIA Corporation & Affiliates 
+All rights reserved.
+
+To run a command as administrator (user `root`), use `sudo <command>`.
+
+=========================
+      NVIDIA CUDA-Q      
+=========================
+
+Version: latest
+
+Copyright (c) 2024 NVIDIA Corporation & Affiliates 
+All rights reserved.
+
+To run a command as administrator (user `root`), use `sudo <command>`.
+
+total_ranks:  16 , current rank:  9 , unique_gpu_identifier:  b'\x96' , params shape: (625, 10)
+total_ranks:  16 , current rank:  13 , unique_gpu_identifier:  b'\x96' , params shape: (625, 10)
+total_ranks:  16 , current rank:  10 , unique_gpu_identifier:  b'\xdc' , params shape: (625, 10)
+total_ranks:  16 , current rank:  11 , unique_gpu_identifier:  b'}' , params shape: (625, 10)
+total_ranks:  16 , current rank:  12 , unique_gpu_identifier:  b'\xb7' , params shape: (625, 10)
+total_ranks:  16 , current rank:  14 , unique_gpu_identifier:  b'\xdc' , params shape: (625, 10)
+total_ranks:  16 , current rank:  15 , unique_gpu_identifier:  b'}' , params shape: (625, 10)
+total_ranks:  16 , current rank:  8 , unique_gpu_identifier:  b'\xb7' , params shape: (625, 10)
+total_ranks:  16 , current rank:  1 , unique_gpu_identifier:  b'E' , params shape: (625, 10)
+total_ranks:  16 , current rank:  2 , unique_gpu_identifier:  b'~' , params shape: (625, 10)
+total_ranks:  16 , current rank:  3 , unique_gpu_identifier:  b'\xa5' , params shape: (625, 10)
+total_ranks:  16 , current rank:  4 , unique_gpu_identifier:  b'\x0f' , params shape: (625, 10)
+total_ranks:  16 , current rank:  5 , unique_gpu_identifier:  b'E' , params shape: (625, 10)
+total_ranks:  16 , current rank:  6 , unique_gpu_identifier:  b'~' , params shape: (625, 10)
+total_ranks:  16 , current rank:  7 , unique_gpu_identifier:  b'\xa5' , params shape: (625, 10)
+rank 0 has (10000, 10) elements of the parameter values
+total_ranks:  16 , current rank:  0 , unique_gpu_identifier:  b'\x0f' , params shape: (625, 10)
+total time 19.755903005599976
