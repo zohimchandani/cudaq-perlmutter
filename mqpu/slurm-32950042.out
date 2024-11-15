@@ -1,0 +1,12 @@
+target.num_qpus(): 4
+current rank: 0
+total ranks: 4
+parameters shape: (1000, 20)
+split parameters shape: (250, 20)
+split parameters shape: (250, 20)
+split parameters shape: (250, 20)
+split parameters shape: (250, 20)
+single qpu time: 6.692173957824707
+mqpu time: 3.4363205432891846
+number of gpus used: 4
+speedup factor 1.9474824520936798
