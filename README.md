@@ -6,6 +6,10 @@ On the login node (zohim@login19:~>) in Perlmutter, run the following commands:
 
 `shifterimg pull nvcr.io/nvidia/nightly/cuda-quantum:latest`
 
+new container name: 
+`shifterimg pull nvcr.io/nvidia/nightly/cuda-quantum:cu12-latest`
+
+
 2. Enter the image to add some configuration:
 
 `shifter --image=docker:nvcr.io/nvidia/nightly/cuda-quantum:latest --module=cuda-mpich /bin/bash`
