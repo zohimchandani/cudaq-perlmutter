@@ -4,15 +4,12 @@ On the login node (zohim@login19:~>) in Perlmutter, run the following commands:
 
 1. Pull the latest image:
 
-`shifterimg pull nvcr.io/nvidia/nightly/cuda-quantum:latest`
-
-new container name: 
-`shifterimg pull nvcr.io/nvidia/nightly/cuda-quantum:cu12-latest`
+`shifterimg pull nvcr.io/nvidia/nightly/cuda-quantum:cu11-latest`
 
 
 2. Enter the image to add some configuration:
 
-`shifter --image=docker:nvcr.io/nvidia/nightly/cuda-quantum:latest --module=cuda-mpich /bin/bash`
+`shifter --image=docker:nvcr.io/nvidia/nightly/cuda-quantum:cu11-latest --module=cuda-mpich /bin/bash`
 
 3. Copy over the distributed_interfaces folder: 
 
@@ -40,7 +37,7 @@ Make sure the `distributed_interfaces` folder from step 5 above is in home direc
 7. Shifter into the container again and copy some files: 
 
 ```
-shifter --image=docker:nvcr.io/nvidia/nightly/cuda-quantum:latest --module=cuda-mpich /bin/bash
+shifter --image=docker:nvcr.io/nvidia/nightly/cuda-quantum:cu11-latest --module=cuda-mpich /bin/bash
 
 cp /usr/local/cuda/targets/x86_64-linux/lib/libcudart.so.11.8.89 ~/libcudart.so
 

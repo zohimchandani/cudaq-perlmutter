@@ -5,7 +5,7 @@
 #SBATCH --gpu-bind=none
 #SBATCH -t 00:10:00
 #SBATCH -q debug
-#SBATCH -A m4642
+#SBATCH -A m4955
 #SBATCH -C gpu
 #SBATCH --image=nersc/sc_cuda_quantum:24.10
 #SBATCH --module=cuda-mpich
