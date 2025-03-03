@@ -1,0 +1,256 @@
+=========================
+      NVIDIA CUDA-Q      
+=========================
+
+Version: cu11-latest
+
+Copyright (c) 2025 NVIDIA Corporation & Affiliates 
+All rights reserved.
+
+To run a command as administrator (user `root`), use `sudo <command>`.
+
+=========================
+      NVIDIA CUDA-Q      
+=========================
+
+Version: cu11-latest
+
+Copyright (c) 2025 NVIDIA Corporation & Affiliates 
+All rights reserved.
+
+To run a command as administrator (user `root`), use `sudo <command>`.
+
+=========================
+      NVIDIA CUDA-Q      
+=========================
+
+Version: cu11-latest
+
+Copyright (c) 2025 NVIDIA Corporation & Affiliates 
+All rights reserved.
+
+To run a command as administrator (user `root`), use `sudo <command>`.
+
+=========================
+      NVIDIA CUDA-Q      
+=========================
+
+Version: cu11-latest
+
+Copyright (c) 2025 NVIDIA Corporation & Affiliates 
+All rights reserved.
+
+To run a command as administrator (user `root`), use `sudo <command>`.
+
+=========================
+      NVIDIA CUDA-Q      
+=========================
+
+Version: cu11-latest
+
+Copyright (c) 2025 NVIDIA Corporation & Affiliates 
+All rights reserved.
+
+To run a command as administrator (user `root`), use `sudo <command>`.
+
+=========================
+      NVIDIA CUDA-Q      
+=========================
+
+Version: cu11-latest
+
+Copyright (c) 2025 NVIDIA Corporation & Affiliates 
+All rights reserved.
+
+To run a command as administrator (user `root`), use `sudo <command>`.
+
+=========================
+      NVIDIA CUDA-Q      
+=========================
+
+Version: cu11-latest
+
+Copyright (c) 2025 NVIDIA Corporation & Affiliates 
+All rights reserved.
+
+To run a command as administrator (user `root`), use `sudo <command>`.
+
+=========================
+      NVIDIA CUDA-Q      
+=========================
+
+Version: cu11-latest
+
+Copyright (c) 2025 NVIDIA Corporation & Affiliates 
+All rights reserved.
+
+To run a command as administrator (user `root`), use `sudo <command>`.
+
+=========================
+      NVIDIA CUDA-Q      
+=========================
+
+Version: cu11-latest
+
+Copyright (c) 2025 NVIDIA Corporation & Affiliates 
+All rights reserved.
+
+To run a command as administrator (user `root`), use `sudo <command>`.
+
+=========================
+      NVIDIA CUDA-Q      
+=========================
+
+Version: cu11-latest
+
+Copyright (c) 2025 NVIDIA Corporation & Affiliates 
+All rights reserved.
+
+To run a command as administrator (user `root`), use `sudo <command>`.
+
+=========================
+      NVIDIA CUDA-Q      
+=========================
+
+Version: cu11-latest
+
+Copyright (c) 2025 NVIDIA Corporation & Affiliates 
+All rights reserved.
+
+To run a command as administrator (user `root`), use `sudo <command>`.
+
+=========================
+      NVIDIA CUDA-Q      
+=========================
+
+Version: cu11-latest
+
+Copyright (c) 2025 NVIDIA Corporation & Affiliates 
+All rights reserved.
+
+To run a command as administrator (user `root`), use `sudo <command>`.
+
+=========================
+      NVIDIA CUDA-Q      
+=========================
+
+Version: cu11-latest
+
+Copyright (c) 2025 NVIDIA Corporation & Affiliates 
+All rights reserved.
+
+To run a command as administrator (user `root`), use `sudo <command>`.
+
+=========================
+      NVIDIA CUDA-Q      
+=========================
+
+Version: cu11-latest
+
+Copyright (c) 2025 NVIDIA Corporation & Affiliates 
+All rights reserved.
+
+To run a command as administrator (user `root`), use `sudo <command>`.
+
+=========================
+      NVIDIA CUDA-Q      
+=========================
+
+Version: cu11-latest
+
+Copyright (c) 2025 NVIDIA Corporation & Affiliates 
+All rights reserved.
+
+To run a command as administrator (user `root`), use `sudo <command>`.
+
+=========================
+      NVIDIA CUDA-Q      
+=========================
+
+Version: cu11-latest
+
+Copyright (c) 2025 NVIDIA Corporation & Affiliates 
+All rights reserved.
+
+To run a command as administrator (user `root`), use `sudo <command>`.
+
+current rank 13 total ranks 16
+current rank 13 total ranks 16 sum_mod_sq_per_rank [2147436625.0225747]
+current rank 13 total ranks 16 gather_sums [2147559302.2103906, 2147533476.325882, 2147541907.0478163, 2147486392.356449, 2147452144.8975594, 2147532930.554896, 2147491095.1090393, 2147532502.359321, 2147495909.540971, 2147579058.46303, 2147548781.537994, 2147389545.482885, 2147473011.7820463, 2147436625.0225747, 2147494865.586337, 2147612926.6779857]
+current rank 13 total ranks 16 norm [185364.93863445477]
+done
+current rank 1 total ranks 16
+current rank 1 total ranks 16 sum_mod_sq_per_rank [2147533476.325882]
+current rank 1 total ranks 16 gather_sums [2147559302.2103906, 2147533476.325882, 2147541907.0478163, 2147486392.356449, 2147452144.8975594, 2147532930.554896, 2147491095.1090393, 2147532502.359321, 2147495909.540971, 2147579058.46303, 2147548781.537994, 2147389545.482885, 2147473011.7820463, 2147436625.0225747, 2147494865.586337, 2147612926.6779857]
+current rank 1 total ranks 16 norm [185364.93863445477]
+done
+current rank 14 total ranks 16
+current rank 14 total ranks 16 sum_mod_sq_per_rank [2147494865.586337]
+current rank 14 total ranks 16 gather_sums [2147559302.2103906, 2147533476.325882, 2147541907.0478163, 2147486392.356449, 2147452144.8975594, 2147532930.554896, 2147491095.1090393, 2147532502.359321, 2147495909.540971, 2147579058.46303, 2147548781.537994, 2147389545.482885, 2147473011.7820463, 2147436625.0225747, 2147494865.586337, 2147612926.6779857]
+current rank 14 total ranks 16 norm [185364.93863445477]
+done
+current rank 0 total ranks 16
+current rank 0 total ranks 16 sum_mod_sq_per_rank [2147559302.2103906]
+current rank 0 total ranks 16 gather_sums [2147559302.2103906, 2147533476.325882, 2147541907.0478163, 2147486392.356449, 2147452144.8975594, 2147532930.554896, 2147491095.1090393, 2147532502.359321, 2147495909.540971, 2147579058.46303, 2147548781.537994, 2147389545.482885, 2147473011.7820463, 2147436625.0225747, 2147494865.586337, 2147612926.6779857]
+current rank 0 total ranks 16 norm [185364.93863445477]
+done
+current rank 15 total ranks 16
+current rank 15 total ranks 16 sum_mod_sq_per_rank [2147612926.6779857]
+current rank 15 total ranks 16 gather_sums [2147559302.2103906, 2147533476.325882, 2147541907.0478163, 2147486392.356449, 2147452144.8975594, 2147532930.554896, 2147491095.1090393, 2147532502.359321, 2147495909.540971, 2147579058.46303, 2147548781.537994, 2147389545.482885, 2147473011.7820463, 2147436625.0225747, 2147494865.586337, 2147612926.6779857]
+current rank 15 total ranks 16 norm [185364.93863445477]
+done
+current rank 2 total ranks 16
+current rank 2 total ranks 16 sum_mod_sq_per_rank [2147541907.0478163]
+current rank 2 total ranks 16 gather_sums [2147559302.2103906, 2147533476.325882, 2147541907.0478163, 2147486392.356449, 2147452144.8975594, 2147532930.554896, 2147491095.1090393, 2147532502.359321, 2147495909.540971, 2147579058.46303, 2147548781.537994, 2147389545.482885, 2147473011.7820463, 2147436625.0225747, 2147494865.586337, 2147612926.6779857]
+current rank 2 total ranks 16 norm [185364.93863445477]
+done
+current rank 12 total ranks 16
+current rank 12 total ranks 16 sum_mod_sq_per_rank [2147473011.7820463]
+current rank 12 total ranks 16 gather_sums [2147559302.2103906, 2147533476.325882, 2147541907.0478163, 2147486392.356449, 2147452144.8975594, 2147532930.554896, 2147491095.1090393, 2147532502.359321, 2147495909.540971, 2147579058.46303, 2147548781.537994, 2147389545.482885, 2147473011.7820463, 2147436625.0225747, 2147494865.586337, 2147612926.6779857]
+current rank 12 total ranks 16 norm [185364.93863445477]
+done
+current rank 3 total ranks 16
+current rank 3 total ranks 16 sum_mod_sq_per_rank [2147486392.356449]
+current rank 3 total ranks 16 gather_sums [2147559302.2103906, 2147533476.325882, 2147541907.0478163, 2147486392.356449, 2147452144.8975594, 2147532930.554896, 2147491095.1090393, 2147532502.359321, 2147495909.540971, 2147579058.46303, 2147548781.537994, 2147389545.482885, 2147473011.7820463, 2147436625.0225747, 2147494865.586337, 2147612926.6779857]
+current rank 3 total ranks 16 norm [185364.93863445477]
+done
+current rank 6 total ranks 16
+current rank 6 total ranks 16 sum_mod_sq_per_rank [2147491095.1090393]
+current rank 6 total ranks 16 gather_sums [2147559302.2103906, 2147533476.325882, 2147541907.0478163, 2147486392.356449, 2147452144.8975594, 2147532930.554896, 2147491095.1090393, 2147532502.359321, 2147495909.540971, 2147579058.46303, 2147548781.537994, 2147389545.482885, 2147473011.7820463, 2147436625.0225747, 2147494865.586337, 2147612926.6779857]
+current rank 6 total ranks 16 norm [185364.93863445477]
+done
+current rank 11 total ranks 16
+current rank 11 total ranks 16 sum_mod_sq_per_rank [2147389545.482885]
+current rank 11 total ranks 16 gather_sums [2147559302.2103906, 2147533476.325882, 2147541907.0478163, 2147486392.356449, 2147452144.8975594, 2147532930.554896, 2147491095.1090393, 2147532502.359321, 2147495909.540971, 2147579058.46303, 2147548781.537994, 2147389545.482885, 2147473011.7820463, 2147436625.0225747, 2147494865.586337, 2147612926.6779857]
+current rank 11 total ranks 16 norm [185364.93863445477]
+done
+current rank 4 total ranks 16
+current rank 4 total ranks 16 sum_mod_sq_per_rank [2147452144.8975594]
+current rank 4 total ranks 16 gather_sums [2147559302.2103906, 2147533476.325882, 2147541907.0478163, 2147486392.356449, 2147452144.8975594, 2147532930.554896, 2147491095.1090393, 2147532502.359321, 2147495909.540971, 2147579058.46303, 2147548781.537994, 2147389545.482885, 2147473011.7820463, 2147436625.0225747, 2147494865.586337, 2147612926.6779857]
+current rank 4 total ranks 16 norm [185364.93863445477]
+done
+current rank 9 total ranks 16
+current rank 9 total ranks 16 sum_mod_sq_per_rank [2147579058.46303]
+current rank 9 total ranks 16 gather_sums [2147559302.2103906, 2147533476.325882, 2147541907.0478163, 2147486392.356449, 2147452144.8975594, 2147532930.554896, 2147491095.1090393, 2147532502.359321, 2147495909.540971, 2147579058.46303, 2147548781.537994, 2147389545.482885, 2147473011.7820463, 2147436625.0225747, 2147494865.586337, 2147612926.6779857]
+current rank 9 total ranks 16 norm [185364.93863445477]
+done
+current rank 7 total ranks 16
+current rank 7 total ranks 16 sum_mod_sq_per_rank [2147532502.359321]
+current rank 7 total ranks 16 gather_sums [2147559302.2103906, 2147533476.325882, 2147541907.0478163, 2147486392.356449, 2147452144.8975594, 2147532930.554896, 2147491095.1090393, 2147532502.359321, 2147495909.540971, 2147579058.46303, 2147548781.537994, 2147389545.482885, 2147473011.7820463, 2147436625.0225747, 2147494865.586337, 2147612926.6779857]
+current rank 7 total ranks 16 norm [185364.93863445477]
+done
+current rank 8 total ranks 16
+current rank 8 total ranks 16 sum_mod_sq_per_rank [2147495909.540971]
+current rank 8 total ranks 16 gather_sums [2147559302.2103906, 2147533476.325882, 2147541907.0478163, 2147486392.356449, 2147452144.8975594, 2147532930.554896, 2147491095.1090393, 2147532502.359321, 2147495909.540971, 2147579058.46303, 2147548781.537994, 2147389545.482885, 2147473011.7820463, 2147436625.0225747, 2147494865.586337, 2147612926.6779857]
+current rank 8 total ranks 16 norm [185364.93863445477]
+done
+current rank 10 total ranks 16
+current rank 10 total ranks 16 sum_mod_sq_per_rank [2147548781.537994]
+current rank 10 total ranks 16 gather_sums [2147559302.2103906, 2147533476.325882, 2147541907.0478163, 2147486392.356449, 2147452144.8975594, 2147532930.554896, 2147491095.1090393, 2147532502.359321, 2147495909.540971, 2147579058.46303, 2147548781.537994, 2147389545.482885, 2147473011.7820463, 2147436625.0225747, 2147494865.586337, 2147612926.6779857]
+current rank 10 total ranks 16 norm [185364.93863445477]
+done
+current rank 5 total ranks 16
+current rank 5 total ranks 16 sum_mod_sq_per_rank [2147532930.554896]
+current rank 5 total ranks 16 gather_sums [2147559302.2103906, 2147533476.325882, 2147541907.0478163, 2147486392.356449, 2147452144.8975594, 2147532930.554896, 2147491095.1090393, 2147532502.359321, 2147495909.540971, 2147579058.46303, 2147548781.537994, 2147389545.482885, 2147473011.7820463, 2147436625.0225747, 2147494865.586337, 2147612926.6779857]
+current rank 5 total ranks 16 norm [185364.93863445477]
+done
