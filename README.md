@@ -2,6 +2,13 @@ Please make sure you work in `GLOBAL $HOME` and not `$SCRACH`
 
 On the login node (zohim@login19:~>) in Perlmutter, run the following commands:
 
+Gotcha: 
+
+1. Do not mix CUDA-Q MPI submodule with other MPI libraries. Use one or the other. For example do not use `cudaq.mpi.initialize()` with `mpi4py`
+
+
+Instructions: 
+
 1. Pull the latest image:
 
 `shifterimg pull nvcr.io/nvidia/nightly/cuda-quantum:cu11-latest`
